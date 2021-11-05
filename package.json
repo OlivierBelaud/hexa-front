@@ -10,7 +10,9 @@
     "vue": "^3.2.16"
   },
   "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
     "@vitejs/plugin-vue": "^1.9.3",
+    "svelte": "^3.44.1",
     "vite": "^2.6.4"
   }
 }

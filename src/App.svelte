@@ -1,21 +1,26 @@
 <script>
-  import logo from './assets/svelte.png'
+  import { Router, Route, Link } from "svelte-routing";
+  import Home from './modules/core/presentation/pages/Home.svelte'
+  import Page1 from './modules/core/presentation/pages/Page1.svelte'
+  export let url = "";
+  
 </script>
 
-<main>
-  <img src={logo} alt="Svelte Logo" />
-  <h1>Hello world!</h1>
-
-  <p>
-    Visit <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte
-    apps.
-  </p>
-
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme">SvelteKit</a> for
-    the officially supported framework, also powered by Vite!
-  </p>
-</main>
+<Router url="{url}">
+  <nav>
+    <Link to="/">Home</Link>
+    <Link to="page1">Page1</Link>
+  </nav>
+  <main>
+    <Route path="page1" component="{Page1}" /> 
+    <!--for now the router just support case sensitive,
+        one workaround colud be add two time the route
+        Example.
+      <Route path="About" component="{About}" /> 
+    -->
+    <Route path="/"><Home /></Route>
+  </main>
+</Router>
 
 <style>
   :root {
@@ -29,7 +34,7 @@
     margin: 0 auto;
   }
 
-  img {
+  /* img {
     height: 16rem;
     width: 16rem;
   }
@@ -58,5 +63,5 @@
     p {
       max-width: none;
     }
-  }
+  } */
 </style>

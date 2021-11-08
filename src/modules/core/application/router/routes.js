@@ -1,6 +1,6 @@
-import Home from '../../presentation/pages/Home.vue';
-import Page1 from '../../presentation/pages/Page1.vue';
-// import { counterRoutes } from '../../../counter/application/router';
+import Home from '../../view/pages/Home.vue';
+import Page1 from '../../view/pages/Page1.vue';
+import { counterRoutes } from '../../../counter/application/router';
 
 export const routes = [
   {
@@ -13,5 +13,5 @@ export const routes = [
     name: 'Page1',
     component: Page1
   },
-//   ...counterRoutes
+  ...counterRoutes
 ];

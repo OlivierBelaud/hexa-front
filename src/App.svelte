@@ -1,24 +1,15 @@
 <script>
-  import { Router, Route, Link } from "svelte-routing";
-  import Home from './modules/core/presentation/pages/Home.svelte'
-  import Page1 from './modules/core/presentation/pages/Page1.svelte'
+  import { Router } from "svelte-routing";
+  import Header from './modules/core/view/components/Header.svelte'
+  import Routes from './modules/core/view/components/Routes.svelte'
   export let url = "";
   
 </script>
 
 <Router url="{url}">
-  <nav>
-    <Link to="/">Home</Link>
-    <Link to="page1">Page1</Link>
-  </nav>
+  <Header />
   <main>
-    <Route path="page1" component="{Page1}" /> 
-    <!--for now the router just support case sensitive,
-        one workaround colud be add two time the route
-        Example.
-      <Route path="About" component="{About}" /> 
-    -->
-    <Route path="/"><Home /></Route>
+    <Routes />
   </main>
 </Router>
 

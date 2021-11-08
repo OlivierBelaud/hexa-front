@@ -1,13 +1,17 @@
-import { createApp } from 'vue'
-import { router } from './modules/core/application/router';
-import App from './App.vue'
+// ================== VUE3 ==================
 
-createApp(App).use(router).mount('#app')
+// import { createApp } from 'vue'
+// import { router } from './modules/core/application/router';
+// import App from './App.vue'
 
-// import App from './App.svelte'
+// createApp(App).use(router).mount('#app')
 
-// const app = new App({
-//   target: document.getElementById('app')
-// })
+// ================== SVELTE ==================
 
-// export default app
+import App from './App.svelte'
+
+const app = new App({
+  target: document.getElementById('app')
+})
+
+export default app

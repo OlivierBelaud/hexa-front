@@ -1,12 +1,13 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link>
-    <router-link to="/page1">Page 1</router-link>
-  </nav>
+  <Header/>
   <main>
     <router-view />
   </main>
 </template>
+
+<script setup>
+  import Header from './modules/core/view/components/Header.vue';
+</script>
 
 <style>
 #app {
